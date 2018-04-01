@@ -5,60 +5,65 @@ import './ViewInventory.css';
 class ViewInventory extends Component {
 
   state = {
-    inventory:[]
+    inventory:[],
+    pads: 0,
+    ht: 0
   }
 
   componentDidMount() {
     this.getInventory();
   }
 
-  componentDidUpdate() {
-    this.totalAcc();
-  }
-
   getInventory = () => {
     axios.get("/api/getInventory")
       .then(result => {
-        console.log(result.data);
-        this.setState({inventory: result.data}, ()=>{
-          //this.totalAcc();
-          console.log("inv: " + this.state.inventory[0].location)})
+        this.setState({inventory: result.data}, ()=>{this.totalAcc()})
       })
   }
 
   totalAcc = () => {
     const pads = this.state.inventory.map(entry=>{
       return entry.pads;
+    }).reduce((start, entry)=>{
+      return start+entry;
     })
     const ht = this.state.inventory.map(entry =>{
       return entry.handTrucks;
-    }) 
-    console.log(pads, ht);
+    }).reduce((start, entry)=>{
+      return start+entry;
+    })
+    this.setState({pads, ht});
   }
 
   render () {
     const inv = this.state.inventory.map(entry=>{
       return(
-        <tbody>
           <tr>
             <td>{entry.location}</td>
             <td>{entry.pads}</td>
             <td>{entry.handTrucks}</td>
           </tr>
-        </tbody>
       )
     })
+
     return (
       <div className="row col-10 justify-content-center view-div">
       <table className="table">
-        <thead>
+        <thead className="table-head">
           <tr>
             <th scope="col">Location</th>
             <th scope="col"># of Pads</th>
             <th scope="col"># of Hand Trucks</th>
           </tr>
         </thead>
-        {inv}
+        <tbody>
+          {inv}
+          <tr>
+            <td>District Total</td>
+            <td>{this.state.pads}</td>
+            <td>{this.state.ht}</td>
+          </tr>
+        </tbody>
       </table>
       </div>
     )

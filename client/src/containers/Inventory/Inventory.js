@@ -29,7 +29,7 @@ class Inventory extends Component {
     const value = target.value;
     const inputName = target.id;
     state.inventory[inputName] = value;
-    this.setState(state.inventory, ()=> {console.log(this.state.inventory)});
+    this.setState(state.inventory);
   }
 
   render() {

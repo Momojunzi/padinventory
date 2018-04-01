@@ -19,7 +19,6 @@ class App extends Component {
   testApi = () => {
     axios.get('/api/test')
       .then(response => {
-        console.log(response)
         const apiTest = response.data;
         this.setState({apiTest})
       });
@@ -28,7 +27,7 @@ class App extends Component {
     return (
       <div className="App container-fluid justify-content-center">
         <div className="row justify-content-center title-div">
-          <h2 className="title">Moving Supplies</h2>
+          <h4 className="title">Moving Pad Tracker</h4>
         </div>
         <Router>
           <div className="row justify-content-center inv-container">

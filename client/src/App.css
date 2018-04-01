@@ -1,9 +1,10 @@
 .App {
   min-width: 100vw;
-
+  font-family: 'Roboto', sans-serif;
   min-height: 100vh;
   text-align: center;
-  background-color: #f7f7f9;
+  /*background-color: #f7f7f9;*/
+  background-color: #e5ede7;
   padding-bottom: 4vh;
 }
 
@@ -15,8 +16,9 @@
 
 .title {
   font-weight: bold;
+  font-family: 'Exo', sans-serif;
 }
 
 .inv-container {
-  
+
 }

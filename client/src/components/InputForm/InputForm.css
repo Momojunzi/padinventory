@@ -3,3 +3,7 @@
   min-height: 60vh;
   background-color: white;
 }
+
+.btn {
+  font-family: 'Exo', sans-serif;
+}
