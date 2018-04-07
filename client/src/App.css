@@ -19,6 +19,6 @@
   font-family: 'Exo', sans-serif;
 }
 
-.inv-container {
-
+.card {
+  min-height: 85vh;
 }

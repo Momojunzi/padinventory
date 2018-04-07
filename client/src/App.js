@@ -30,12 +30,14 @@ class App extends Component {
           <h4 className="title">Moving Pad Tracker</h4>
         </div>
         <Router>
-          <div className="row justify-content-center inv-container">
+          <div className="col-md-8 mx-auto px-0">
+            <div className="card">
               <Navigation />
               <Switch>
                 <Route exact path="/" component={Inventory}/>
                 <Route exact path="/view" component={ViewInventory}/>
               </Switch>
+            </div>
           </div>
         </Router>
       </div>

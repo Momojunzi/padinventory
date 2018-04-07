@@ -9,6 +9,15 @@ nav {
   border-bottom: solid #888888 0px;
 }
 
-.nav-item {
-  box-shadow: 1px 2px 8px #888888;
+.nav-pills > li > a {
+  color: #28a745;
+}
+
+.nav-pills > li > a.active {
+  background-color: #28a745 !important;
+  color: #ffffff !important;
+}
+
+.nav-link-color {
+  color: #ffffff;
 }

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import './ViewInventory.css';
+import Navigation from '../Navigation/Navigation'
 
 class ViewInventory extends Component {
 
@@ -47,7 +48,7 @@ class ViewInventory extends Component {
     })
 
     return (
-      <div className="row col-10 justify-content-center view-div">
+      <div className="card-body">
       <table className="table">
         <thead className="table-head">
           <tr>

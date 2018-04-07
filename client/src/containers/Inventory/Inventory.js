@@ -3,6 +3,7 @@ import InputForm from '../../components/InputForm/InputForm.js';
 import './Inventory.css';
 import axios from 'axios';
 import moment from 'moment';
+import Navigation from '../Navigation/Navigation'
 
 class Inventory extends Component {
   state = {
@@ -38,7 +39,7 @@ class Inventory extends Component {
 
   render() {
     return(
-      <div className="row col-10 justify-content-center form-div" >
+      <div className="card-body mx-auto">
         <InputForm changeHandler={this.getFormData} clickHandler={this.updateInventory} />
       </div>
     )

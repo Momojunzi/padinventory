@@ -21,8 +21,8 @@ class Navigation extends Component {
   render() {
     const {logClass, viewClass} = this.state;
     return(
-        <nav className="row col-10 justify-content-start">
-          <ul className="nav nav-tabs row col-12 justify-content-start">
+        <nav className="card-header">
+          <ul className="nav nav-pills nav-fill">
             <li className="nav-item">
               <Link className={logClass}
                 to="/"
