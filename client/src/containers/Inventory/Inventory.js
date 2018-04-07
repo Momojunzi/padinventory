@@ -39,7 +39,7 @@ class Inventory extends Component {
 
   render() {
     return(
-      <div className="card-body mx-auto">
+      <div className="card-body">
         <InputForm changeHandler={this.getFormData} clickHandler={this.updateInventory} />
       </div>
     )

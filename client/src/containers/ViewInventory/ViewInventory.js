@@ -48,7 +48,7 @@ class ViewInventory extends Component {
     })
 
     return (
-      <div className="card-body">
+      <div className="card-body my-auto">
       <table className="table">
         <thead className="table-head">
           <tr>

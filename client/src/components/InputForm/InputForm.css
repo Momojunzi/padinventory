@@ -3,7 +3,24 @@
   min-height: 60vh;
   background-color: white;
 }
+.form-group {
+  margin-top: 8%;
+}
+
+.form-btn {
+  margin-top: 12%;
+}
 
 .btn {
   font-family: 'Exo', sans-serif;
+}
+
+@media screen and (orientation: landscape) {
+  .form-group {
+    margin-top: 3%;
+  }
+
+  .form-btn {
+    margin-top: 5%;
+  }
 }

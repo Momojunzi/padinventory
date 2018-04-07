@@ -3,7 +3,7 @@ import "./InputForm.css";
 
 const InputForm = (props) => {
   return (
-    <form className="row justify-content-center">
+    <form className="row justify-content-around">
       <div className="form-group col-11 text-left">
         <label for="location">Location</label>
         <input className="form-control" id="location" placeholder="ex. 0522-10" onChange={props.changeHandler}/>
@@ -16,7 +16,7 @@ const InputForm = (props) => {
         <label for="handTrucks">Number of hand trucks</label>
         <input className="form-control" id="handTrucks" placeholder="ex. 10" onChange={props.changeHandler}/>
       </div>
-      <div className="form-group coll-11">
+      <div className="form-group coll-11 form-btn">
         <button className="btn btn-lg btn-success" onClick={props.clickHandler}>Submit</button>
       </div>
     </form>
